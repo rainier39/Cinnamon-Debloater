@@ -1,2 +1,4 @@
 # Cinnamon-Debloater
-A shell script that removes unnecessary packages that come with the Cinnamon desktop environment on Linux.
+This shell script removes any packages that I have deemed "bloat" which are installed by default in a fresh install of the Cinnamon desktop environment on Debian. I created it mostly for my own personal use but have decided to publish it for anyone to use. I would strongly recommend reading through the script before running it; in fact one should always do that before running a script like this to make sure it isn't malware or that it doesn't do undesirable things in general. The script itself is relatively user friendly, and will prompt the user for each removal with a brief message about what exactly it's removing. That is, unless you enter "y" to the first prompt which I wouldn't recommend unless you truly want to remove everything that the script removes.
+
+Developed and tested on Debian 12 in an Oracle VirtualBox Virtual Machine.
