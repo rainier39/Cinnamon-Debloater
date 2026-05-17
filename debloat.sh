@@ -205,7 +205,7 @@ if [[ ($all == "y") || ($help == "y") ]]; then
   sudo apt-get purge yelp -y
 fi
 
-# -- Remove Gnote Help. --
+# -- Remove Gnote. --
 if [[ $all != "y" ]]; then
   echo -n "Remove Gnote? [y/n]: "
   read -r gnote
@@ -214,6 +214,17 @@ fi
 
 if [[ ($all == "y") || ($gnote == "y") ]]; then
   sudo apt-get purge gnote -y
+fi
+
+# -- Remove VNC Server. --
+if [[ $all != "y" ]]; then
+  echo -n "Remove VNC Server? [y/n]: "
+  read -r vnc
+  validateChoice "$vnc"
+fi
+
+if [[ ($all == "y") || ($vnc == "y") ]]; then
+  sudo apt-get purge x11vnc -y
 fi
 
 # -- Autopurge to remove dependencies/now unnecessary packages. --
