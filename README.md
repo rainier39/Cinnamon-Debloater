@@ -10,9 +10,9 @@ Enter the script's directory.
 
 > cd Cinnamon-Debloater
 
-Make the script executable.
+Make the script executable (if needed).
 
-> chmod 700 debloat.sh
+> chmod +x debloat.sh
 
 Run the script as the superuser.
 
@@ -21,4 +21,4 @@ Run the script as the superuser.
 The prompts within the script will guide you the rest of the way.
 
 ## Version Information
-Developed and tested on Debian 12 in an Oracle VirtualBox Virtual Machine. Tested on Debian 13 in an Oracle VirtualBox VM.
+Originally developed and tested on Debian 12. Updated for Debian 13. May work on other Debian/Ubuntu-based distributions.
