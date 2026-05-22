@@ -227,6 +227,28 @@ if [[ ($all == "y") || ($vnc == "y") ]]; then
   sudo apt-get purge x11vnc -y
 fi
 
+# -- Remove Gnome Backups. --
+if [[ $all != "y" ]]; then
+  echo -n "Remove Gnome Backups? [y/n]: "
+  read -r dejadup
+  validateChoice "$dejadup"
+fi
+
+if [[ ($all == "y") || ($dejadup == "y") ]]; then
+  sudo apt-get purge deja-dup -y
+fi
+
+# -- Remove Gnome Disks. --
+if [[ $all != "y" ]]; then
+  echo -n "Remove Gnome Disks? [y/n]: "
+  read -r disks
+  validateChoice "$disks"
+fi
+
+if [[ ($all == "y") || ($disks == "y") ]]; then
+  sudo apt-get purge gnome-disk-utility -y
+fi
+
 # -- Autopurge to remove dependencies/now unnecessary packages. --
 if [[ $all != "y" ]]; then
   echo -n "Autopurge? (removes dependencies/now unnecessary packages) [y/n]: "
